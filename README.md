@@ -54,14 +54,15 @@
 
 **핵심 가치:** 처음엔 느려 보여도, 전체적으로는 더 빠름
 
-### 과학적 근거
+### 이론적 기반
 
-이 방법론은 노벨상 수상자 **Daniel Kahneman**의 Dual Process Theory를 기반으로 합니다:
+이 방법론은 세 가지 검증된 이론을 기반으로 합니다:
 
-- **System 1 (빠른 사고)**: 자동적, 직관적, 실수하기 쉬움
-- **System 2 (느린 사고)**: 의도적, 분석적, 정확함
+- **Daniel Kahneman** (노벨상): Dual Process Theory - 인간의 사고 방식
+- **Donella Meadows**: Systems Thinking - 전체 시스템 이해
+- **Genrich Altshuller**: TRIZ - 창의적 문제 해결
 
-개발의 각 단계에서 적절한 시스템을 활성화하여 품질과 속도를 동시에 달성합니다.
+이 이론들이 어떻게 ROD, TFD, DGTF로 실천되는지는 문서를 참고하세요.
 
 ### 문서
 
@@ -135,14 +136,15 @@ Maintain thoughtfulness even under pressure to prevent poor rushed decisions fro
 
 **Core Value:** Appears slow at first, but faster overall
 
-### Scientific Foundation
+### Theoretical Foundation
 
-This methodology is based on Nobel laureate **Daniel Kahneman's** Dual Process Theory:
+This methodology is built on three validated theories:
 
-- **System 1 (Fast Thinking)**: Automatic, intuitive, error-prone
-- **System 2 (Slow Thinking)**: Deliberate, analytical, accurate
+- **Daniel Kahneman** (Nobel Laureate): Dual Process Theory - How humans think
+- **Donella Meadows**: Systems Thinking - Understanding the whole system
+- **Genrich Altshuller**: TRIZ - Creative problem solving
 
-By activating the appropriate system at each development stage, we achieve both quality and speed.
+See the documentation for how these theories are put into practice through ROD, TFD, and DGTF.
 
 ### Documentation
 
