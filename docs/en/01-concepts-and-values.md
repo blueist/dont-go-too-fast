@@ -5,9 +5,32 @@
 This document concisely explains the core concepts and values of three methodologies: ROD, TFD, and DGTF.
 
 These methodologies are:
-- Derived from decades of practical experience
-- Based on validated theories
+- Derived from decades of real-world experience
+- Built on validated theories
 - Practical and immediately applicable
+
+---
+## Not What, but How
+
+**Many developers know "What":**
+- Clean Code
+- SOLID Principles
+- TDD
+- The importance of code reviews
+
+**But they don't know "How":**
+- How to maintain Clean Code under pressure?
+- How to follow SOLID with a deadline looming?
+- How to write tests when there's no time?
+- How to stay thoughtful when things are urgent?
+
+**ROD, TFD, DGTF are the answers to "How".**
+
+Even if you know What, without How,
+you end up using global variables under Friday afternoon pressure.
+
+This methodology is not a new "What".
+It's the answer to **"Why"**, **"When"**, and **"How"** to do good development.
 
 ---
 ## Theoretical Foundation
@@ -19,27 +42,27 @@ This methodology is built on three powerful theoretical foundations.
 **System 1 (Fast Thinking)**
 - Automatic, intuitive, immediate
 - Requires little effort
-- Fast but prone to errors
+- Fast but error-prone
 - Dominant under pressure
 
 **System 2 (Slow Thinking)**
-- Deliberate, analytical, careful
+- Deliberate, analytical, thoughtful
 - Requires focus and effort
 - Slow but accurate
-- Activates when there's time
+- Active when relaxed
 
-### Development Phase by System
+### Systems by Development Phase
 
 - Design Phase:
-	- Time is available
+	- Time available
 	- System 2 can be activated
-	- Deep thinking is possible
+	- Deep thinking possible
 
 - Implementation Phase:
 	- Time pressure
-	- Requirement changes
-	- System 1 naturally dominates
-	- Risk of bad urgent decisions
+	- Changing requirements
+	- System 1 naturally dominant
+	- Risk of poor rushed decisions
 
 **Key Insight:**
 > Each development phase requires a different thinking system.
@@ -60,15 +83,15 @@ A system is a collection of interconnected elements where the whole is greater t
 	- Define system boundaries
 
 - ROD's Service Chain:
-	- Each service = element of the system
+	- Each service = system element
 	- Call relationships = connections between elements
-	- Complete chain = entire system
+	- Complete chain = whole system
 	- Missing = system incompleteness
 
 **Systemic Meaning of "More is better than missing":**
 
 - Systems Theory:
-	"System behavior is determined by all elements and their relationships"
+	"A system's behavior is determined by all its elements and their relationships"
 
 - ROD Design:
 	- Define all elements (services) in advance
@@ -77,19 +100,19 @@ A system is a collection of interconnected elements where the whole is greater t
 
 - Implementation Phase:
 	- Complete system map exists
-	- Only remove unnecessary elements (safe)
+	- Remove unnecessary elements (safe)
 	- Adding missing elements (dangerous) → prevented
 
 
 **Insights from Systems Thinking:**
 
-1. Local Optimization vs Global Optimization
-   - Rather than optimizing each service
-   - The flow of the entire service chain matters
+1. Local vs Global Optimization
+   - More important than optimizing each service
+   - Is the flow of the entire service chain
 
 2. Feedback Loops
    - Test → Implement → Verify → Improve
-   - TFD provides the feedback mechanism
+   - TFD provides feedback mechanism
 
 3. Leverage Points
    - Design phase = most powerful intervention point
@@ -102,7 +125,7 @@ A system is a collection of interconnected elements where the whole is greater t
 
 A theory of inventive problem solving that discovered innovation patterns through patent analysis.
 
-**Contradictions in Software Development:**
+**The Contradiction in Software Development:**
 
 - Technical Contradiction:
 	"Fast development" vs "High quality"
@@ -124,10 +147,10 @@ A theory of inventive problem solving that discovered innovation patterns throug
 	   - Comprehensive tests (TFD)
    
    - Implementation Phase:
-	   - Follow the design (fast)
+	   - Follow design (fast)
 	   - Maintain quality with DGTF
    
-    Result: Fast yet high quality
+    Result: Fast AND high quality
 
 2. Separation by Condition
    
@@ -137,20 +160,20 @@ A theory of inventive problem solving that discovered innovation patterns throug
    - Under pressure:
 	   - "Remove" strategy (only remove)
    
-   Result: Optimal strategy for each situation
+   Result: Optimal strategy per situation
 
 3. Ideal Final Result (IFR)
    
    - TRIZ's question:
-	   "What if the problem solves itself without additional resources?"
+	   "What if the problem solved itself without additional resources?"
    
    - ROD's answer:
-	   "If we create a complete service chain in the design phase,
-    confusion disappears by itself in the implementation phase"
+	   "If we create a complete service chain in design phase,
+    confusion disappears by itself in implementation phase"
 
 **TRIZ Evolution Patterns and ROD:**
 
-System Evolution Laws:
+Laws of System Evolution:
 1. Increasing Completeness
    → ROD: Eliminate Missing
 
@@ -158,28 +181,28 @@ System Evolution Laws:
    → SOLID: Replaceable structure
 
 3. Increasing Ideality
-   → Gradual improvement: Remove unnecessary elements
+   → Incremental improvement: Remove unnecessary
 
 4. Overcoming Imbalance
    → TFD: Balance design-implementation-testing
 
 
-**TRIZ 40 Inventive Principles Applied to ROD:**
+**TRIZ's 40 Inventive Principles Applied to ROD:**
 ```
 1. Segmentation
    - Divide large system into services
    - Develop/test each independently
 
 10. Prior Action
-    - Define everything in advance during design phase
-    - Prevent urgent decisions during implementation
+    - Define everything in design phase
+    - Prevent rushed decisions during implementation
 
 11. Prior Counteraction
     - ROD blocks System 1's bad decisions in advance
     - TFD prevents bugs in advance
 
 13. The Other Way Round
-    - Traditional: Implement → Find problems → Solve
+    - Traditional: Implement → Find problems → Fix
     - ROD: Design → Prevent problems → Implement
 
 25. Self-Service
@@ -187,7 +210,7 @@ System Evolution Laws:
     - Minimize external dependencies
 ```
 
-### 4. Integration of the Three Theories
+### 4. Integration of Three Theories
 
 **The Complete Picture:**
 ```
@@ -211,7 +234,7 @@ System Evolution Laws:
 │     Genrich Altshuller              │
 │     (Problem Solving)               │
 │                                     │
-│  Resolve contradictions, seek ideality│
+│  Resolve contradictions, seek ideal │
 │  How to innovate?                   │
 └─────────────────────────────────────┘
               ↓
@@ -228,11 +251,11 @@ System Evolution Laws:
 
 - Kahneman → "Why"
 	- Why do we make bad decisions under pressure
-	- Why the design phase is important
-	- Why we must be careful
+	- Why is the design phase important
+	- Why must we be thoughtful
 
 - Meadows → "What"
-	- What to design (the complete system)
+	- What should we design (the whole system)
 	- What must not be missing
 	- What is the leverage point
 
@@ -253,7 +276,7 @@ Why this methodology is powerful:
 1. Scientific basis (Kahneman - Nobel Prize)
 2. Systems thinking (Meadows - Systems Theory)
 3. Proven innovation patterns (Altshuller - millions of patents)
-4. Decades of practical experience
+4. Decades of real-world experience
 
 => Theory + Practice = Reliable methodology
 
@@ -265,12 +288,27 @@ Why this methodology is powerful:
 
 **Definition:**
 > Build a complete service chain in the design phase,
-> preventing confusion and System 1's bad urgent decisions during implementation.
+> preventing confusion and System 1's poor rushed decisions during implementation.
 
 **Core Principle:**
 > **"More is better than missing"**
 > 
 > Having more is better than having something missing
+
+---
+**ROD is not a new "What":**
+
+Let's be honest. ROD isn't completely new.
+- Clean Architecture? Similar.
+- Service-Oriented? Yes.
+- SOLID Principles? Included.
+
+But here's the question:
+You know all of these.
+Why don't you follow them under pressure?
+
+ROD is not a new technology.
+It's the answer to **"Why"**, **"When"**, and **"How"** to do good design.
 
 ---
 
@@ -280,19 +318,19 @@ Why this methodology is powerful:
 
 - Situation:
 	- Deadline pressure
-	- Requirement changes
-	- Not enough time
+	- Changing requirements
+	- Lack of time
 
-- Psychological State:
+- Mental State:
 	- Stress
 	- System 1 dominance
-	- "Must solve it quickly!"
+	- "I need to solve this fast!"
 
 - When Missing is discovered:
 "Huh? I need this but it's not in the design?"
 → Confusion
-→ System 1: "Global variable!", "Singleton!", "Hardcoding!"
-→ Bad urgent decisions
+→ System 1: "Global variable!", "Singleton!", "Hardcode!"
+→ Poor rushed decision
 → Technical debt
 
 
@@ -302,7 +340,7 @@ Why this methodology is powerful:
 
 **Building Service Chains:**
 
-Design so that all requirements can be achieved through service chains alone
+Design so all requirements can be achieved through service chains alone
 
 **Strict Rules:**
 - ❌ No Constructors
@@ -311,9 +349,9 @@ Design so that all requirements can be achieved through service chains alone
 - ❌ No Implementation thinking
 - ✅ Express everything as services
 
-**Validation Criteria:**
+**Verification Criteria:**
 ```
-Question: Can requirements be achieved through service chains alone?
+Question: Can requirements be achieved through service chain alone?
 
 YES → Complete (No Missing)
 NO → Missing exists → Add service
@@ -321,17 +359,17 @@ NO → Missing exists → Add service
 
 ---
 
-### Meaning of "More is better than missing"
+### The Meaning of "More is better than missing"
 
 **Asymmetry of Removal vs Addition:**
 
-- Removing unnecessary services:
+- Removing unnecessary service:
 	- Clear evidence ("not used")
 	- Easy
 	- Safe
-	- Can be decided with System 2
+	- Can judge with System 2
 
-- Adding missing services:
+- Adding missing service:
 	- Under pressure
 	- Difficult
 	- Dangerous
@@ -340,46 +378,102 @@ NO → Missing exists → Add service
 
 **Strategy:**
 - Design Phase (time available):
-"Might this be needed?" → Include if uncertain
+"Might need this?" → Include if uncertain
 
 - Implementation Phase:
 "Not being used?" → Remove (easy)
-"Need it but it's not there?" → Doesn't happen (ROD prevents it)
-
+"Need it but it's missing?" → Doesn't happen (ROD prevents it)
 
 ---
+### Change Isolation - ROD's Real Strength
 
-### Connection with SOLID
+**Let's accept reality:**
 
-**Why enforce SOLID:**
+No matter how perfectly you design,
+changes happen during implementation.
+Requirements change, or you discover a better way.
 
-Requirements frequently change during implementation
-→ Define each service as an interface (replaceable)  
-→ Requirement change = Service replacement  
+**The problem isn't change itself.
+The problem is change propagating everywhere.**
+
+**Changes in Poor Design:**
+```
+LoginService modified 
+  → AuthService affected 
+    → TokenService affected 
+      → SessionService affected
+        → ...
+
+Fix one place, chain reaction.
+System 1: "Just fix everywhere!"
+→ Bug explosion
+→ Greater confusion
+```
+
+**Changes in ROD's Service Chain:**
+```
+Each service is independent.
+Connected by interface (contract).
+
+LoginService modified?
+→ Only change LoginService internals
+→ As long as Output (contract) is maintained
+→ AuthService is unaffected
+→ Change is isolated
+```
+
+**Contract between "Service End" and "Next Service Start":**
+
+```
+┌──────────────┐    Contract    ┌─────────────┐
+│ LoginService │  ───────────→ │ AuthService  │
+│              │   (Only       │              │
+│  Internals   │   maintain    │  Internals   │
+│  can change  │   Input/      │  can change  │
+│  freely      │   Output)     │  freely      │
+└──────────────┘               └─────────────┘
+```
+
+As long as contract is kept:
+- Internal implementation can change freely
+- No impact on other services
+- Even if System 1 activates, damage is limited
+
+**This is the real reason "Why" to follow SOLID:**   
+
+Requirements change frequently during implementation   
+→ Define each service with interface (replaceable)     
+→ Requirement change = Service replacement   
 → No impact on other parts  
-→ No need for System 1's bad urgent decisions  
+→ No need for System 1's poor rushed decisions  
+
+- Single Responsibility: Each service has one responsibility → Minimize change scope
+- Open-Closed: Open for extension, closed for modification → Protect existing code
+- Liskov Substitution: Services are replaceable → Flexible response
+- Interface Segregation: Only necessary interfaces → Remove unnecessary dependencies
+- Dependency Inversion: Depend on interfaces → Isolate changes
 
 ---
 
-### Value of ROD
+### ROD's Value
 
-1. Eliminate confusion during implementation
+1. Eliminate Implementation Phase Confusion
    - Complete service chain = clear guide
-   - No Missing = No "how do I do this?"
+   - No Missing = no "How do I do this?"
 
-2. Prevent System 1's bad urgent decisions
-   - Just follow the design even under pressure
+2. Prevent System 1's Poor Rushed Decisions
+   - Under pressure, just follow the design
    - No need for "Global variable!", "Singleton!"
 
-3. Safely respond to requirement changes
+3. Safely Handle Requirement Changes
    - SOLID: Services are replaceable
    - No impact on other parts
 
-4. Minimize technical debt
+4. Minimize Technical Debt
    - Maintain clean architecture
    - Maintainable structure
 
-5. Predictable development
+5. Predictable Development
    - Service chain = task list
    - Progress is measurable
 
@@ -390,13 +484,51 @@ Requirements frequently change during implementation
 ### Core Concept
 
 **Definition:**
-> Design tests with (or before) the design,
+> Design tests alongside (or before) design,
 > clarifying requirements and ensuring quality.
 
 **Core Principle:**
 > **"Requirements = Tests"**
 > 
-> Tests are not afterthoughts but specifications
+> Tests are not afterthoughts, they are specifications
+
+---
+
+### TFD's Relationship with TDD
+
+**TDD (Test-Driven Development):**
+- An excellent methodology
+- Red → Green → Refactor
+- "Tests drive the design"
+
+**TFD does not negate TDD.  
+TFD makes TDD easier.**
+
+**Why TDD is difficult:**
+```
+Trying to write tests without design is overwhelming.
+"What should I test?"
+"Is this test even right?"
+```
+
+**Why TFD is easier:**
+```
+ROD gives you a service chain.
+Each service has clear input/output.
+"Just test this service's contract."
+```
+
+**TDD vs TFD:**
+```
+TDD: Test → Implement → Refactor
+     "Tests drive the design"
+
+TFD: Design (ROD) → Test → Implement
+     "Design defines the tests"
+```
+
+Doing TDD well? Congratulations. Keep going.   
+Found TDD difficult? Try ROD first. You'll see what tests to write.
 
 ---
 
@@ -405,12 +537,12 @@ Requirements frequently change during implementation
 **Problems with Traditional Approach:**
 
 - Flow:
-	Design → Implement → "Oh, I need to test" → Write tests
+	Design → Implement → "Oh, I should test" → Write tests
 
-- Problems:
-	1. Tests conform to implementation (not requirements)
-	2. Edge cases are missed
-	3. Structure that's hard to test
+- Issues:
+	1. Tests fit implementation (not requirements)
+	2. Missing edge cases
+	3. Hard-to-test structure
 	4. Incomplete coverage
 
 ---
@@ -428,12 +560,76 @@ Requirements frequently change during implementation
 	- Edge case tests
 	- Performance tests
 
-- Completion criteria:
-	All tests pass = Complete
+- Completion Criteria:
+	All tests pass = Done
 
 ---
 
-### Combining TFD with ROD
+### How Tests Become Requirements
+
+**Problems with Traditional Requirements:**
+
+```
+"Users should be able to log in"
+
+→ Ambiguous
+→ What about wrong password?
+→ What after 3 failures?
+→ What about session expiry?
+→ What about concurrent login?
+```
+
+**TFD's Requirements (Defined as Tests):**
+
+```
+test_login_success: 
+  Correct ID/PW → Login success, return token
+
+test_login_wrong_password: 
+  Wrong PW → Error message, login fails
+
+test_login_user_not_found: 
+  Unknown ID → Error message, login fails
+
+test_login_locked_after_3_failures: 
+  3 failures → Account locked, lock message
+
+test_session_expires_after_30min: 
+  After 30min → Session expires, re-login required
+```
+
+**These tests ARE the requirements:**
+- No ambiguity
+- Executable
+- Verifiable
+- Always up to date
+
+**When requirements change?**
+→ Change the tests
+→ If tests pass, requirements are satisfied
+
+**ROD's Service Contract = TFD's Test:**
+
+```
+ROD: LoginService → AuthService → TokenService
+
+There's a "contract" between each service.
+What is that contract?
+
+Tests.
+
+LoginService's tests = LoginService's requirements = LoginService's contract
+
+Tests pass → Contract fulfilled
+Tests fail → Contract violated
+```
+
+No more wondering "Is this really right?"   
+Tests tell you.
+
+---
+
+### TFD and ROD Combined
 
 ```
 ROD: Complete service chain
@@ -446,38 +642,38 @@ Verify: Confirm all tests pass
 ```
 
 **Synergy:**
-- ROD defines "what to build"
-- TFD verifies "does it work correctly"
+- ROD defines "What to build"
+- TFD verifies "Does it work correctly"
 - Together they serve as complete specifications
 
 ---
 
-### Value of TFD
+### TFD's Value
 
-1. Clear requirements
-   - Tests = specifications
+1. Clear Requirements
+   - Tests = Specifications
    - Clear what to implement
 
-2. Complete test coverage
+2. Complete Test Coverage
    - No missing edge cases
    - All scenarios covered
 
-3. Enforces testable design
+3. Force Testable Design
    - Dependency injection
    - Interface usage
    - Mockable structure
 
-4. Confidence and stability
-   - All tests pass = works correctly
+4. Confidence and Stability
+   - All tests pass = Works correctly
    - Safe refactoring
    - Prevent regression bugs
 
-5. Living documentation
-   - Tests show how to use
+5. Living Documentation
+   - Tests show usage
    - Always up to date
 
-6. Measurable progress
-   - Y tests passing out of X
+6. Measurable Progress
+   - X of Y tests passing
    - Clear how much remains
 
 ---
@@ -488,12 +684,10 @@ Verify: Confirm all tests pass
 
 **Definition:**
 > Activate System 2 even under pressure,
-> preventing System 1's bad urgent decisions and maintaining quality.
+> preventing System 1's poor rushed decisions and maintaining quality.
 
 **Core Principle:**
 > **"Slow is smooth, smooth is fast"**
-> 
-> Going slow makes things smooth, and smooth makes things fast
 
 ---
 
@@ -510,12 +704,12 @@ Verify: Confirm all tests pass
 - Response:
 	- Stress
 	- System 1 activation
-	- "Must solve it quickly!"
+	- "I need to fix this fast!"
 
-- System 1's decisions:
-	- Choose the first solution that comes to mind
+- System 1's Decisions:
+	- Choose first solution that comes to mind
 	- Don't consider side effects
-	- "Just make it work and fix it later"
+	- "Just make it work, fix it later"
 
 - Results:
 	- Technical debt
@@ -539,31 +733,66 @@ Verify: Confirm all tests pass
    - Analyze impact
 
 3. Proceed
-   - Implement carefully
-   - Complete one by one
+   - Implement thoughtfully
+   - Complete one at a time
    - Verify as you go
 
 ---
 
 ### Driving Analogy
 
-**Having a driver's license ≠ Good driver**
+**Having a license ≠ Good driver**
 
-- Bad driver (System 1):
+- Bad Driver (System 1):
 	- Rush through
 	- Don't check
 	- Aggressive
-	→ Accidents, stress, overall slow
+	→ Accidents, stress, slower overall
 
-- Good driver (System 2):
-	- Check consistently
+- Good Driver (System 2):
+	- Consistently check
 	- Anticipate and respond
 	- Maintain safe distance
-	→ No accidents, comfortable, overall fast
+	→ No accidents, comfortable, faster overall
 
 **Programming is the same:**
 - Coding ability ≠ Good programmer  
-- Good programmer = Habits + Attitude + Carefulness
+- Good programmer = Habits + Attitude + Thoughtfulness
+
+---
+
+### Self-Control Creates the Professional
+
+**DGTF's core is not changing external environment.  
+DGTF's core is controlling yourself.**
+
+Robert Martin's "Clean Coder" says:
+- "Be able to say No"
+- "Don't yield to pressure"
+- "Be a Professional"
+
+But **"How"**?  
+
+**DGTF is that "How":**
+- Recognize System 1's "Hurry!" impulse
+- Stop and activate System 2
+- Judge thoughtfully and proceed
+
+**Those who can control themselves  
+can become the "Professional" Clean Coder talks about.**
+
+Professionals earn trust through results.  
+With trust, negotiation becomes unnecessary.
+
+```
+DGTF (System 1 control)
+    ↓
+Person who can control themselves
+    ↓
+Clean Coder's "Professional"
+    ↓
+Earn trust through results
+```
 
 ---
 
@@ -577,60 +806,60 @@ Verify: Confirm all tests pass
 
 **Truth:**
 ```
-✅ DGTF = Work carefully
+✅ DGTF = Work thoughtfully
 ✅ DGTF = Quality first
-✅ DGTF = Sustainable speed
+✅ DGTF = Sustainable pace
 ```
 **Paradox:**
 ```
-Looks slow at first,
-but overall faster
-(minimal rework)
+Seems slow at first,
+but faster overall
+(minimize rework)
 ```
 ---
 
-### Value of DGTF
+### DGTF's Value
 
-1. Fewer bugs
-   - Careful implementation
+1. Fewer Bugs
+   - Thoughtful implementation
    - Thorough verification
    - Early detection
 
-2. Less rework
-   - Right the first time
+2. Less Rework
+   - Right from the start
    - Minimize technical debt
 
-3. Higher code quality
+3. Higher Code Quality
    - Clean structure
-   - Easy maintenance
+   - Easy to maintain
 
-4. Sustainable pace
+4. Sustainable Pace
    - No burnout
    - Consistent productivity
-   - Faster in the long run
+   - Faster long-term
 
-5. Build team trust
+5. Build Team Trust
    - Stable deployments
    - Predictable schedules
-   - Quality assurance
+   - Quality guaranteed
 
-6. Personal growth
+6. Personal Growth
    - System 2 training
    - Expertise improvement
-   - Career development
+   - Career advancement
 
 ---
 
-## Integration of the Three Methodologies
+## Integration of Three Methodologies
 
-### Complete Structure of Development Process
+### Complete Development Process Structure
 
 ```
 ┌──────────────────────────────────────┐
 │ Design Phase: ROD                    │
-│ ━━━━━━━━━━━━━━━━━━━│
+│ ━━━━━━━━━━━━━━━━━━━                  │
 │                                      │
-│ Situation: Time available, low pressure│
+│ Situation: Time available, low press │
 │ System: System 2 active              │
 │                                      │
 │ Tasks:                               │
@@ -643,7 +872,7 @@ but overall faster
              ↓
 ┌──────────────────────────────────────┐
 │ Verification Design Phase: TFD       │
-│ ━━━━━━━━━━━━━━━━━━━ │
+│ ━━━━━━━━━━━━━━━━━━━                  │
 │                                      │
 │ System: System 2 active              │
 │                                      │
@@ -651,23 +880,23 @@ but overall faster
 │ • Test cases for each service        │
 │ • Define completion criteria         │
 │                                      │
-│ Effect: Verify "does it work correctly"│
+│ Effect: "Works correctly" verified   │
 └──────────────────────────────────────┘
              ↓
 ┌──────────────────────────────────────┐
 │ Implementation Phase: DGTF           │
-│ ━━━━━━━━━━━━━━━━━━━ │
+│ ━━━━━━━━━━━━━━━━━━━                  │
 │                                      │
-│ Situation: Time shortage, high pressure│
-│ Risk: System 1 dominance             │
+│ Situation: Time short, high pressure │
+│ Risk: System 1 dominant              │
 │ Response: Activate System 2 with DGTF│
 │                                      │
 │ Safeguards:                          │
 │ • ROD: Service chain guide           │
 │ • TFD: Test criteria                 │
-│ • DGTF: Careful progress             │
+│ • DGTF: Thoughtful progress          │
 │                                      │
-│ Effect: "How to build" safely        │
+│ Effect: "How to build" is safe       │
 └──────────────────────────────────────┘
 ```
 
@@ -677,20 +906,20 @@ but overall faster
 
 - ROD alone:
 	- Complete design
-	- But lacking quality assurance
+	- But lacks quality assurance
 
 - TFD alone:
 	- Quality assurance
 	- But design may be incomplete
 
 - DGTF alone:
-	- Careful progress
-	- But lacking direction
+	- Thoughtful progress
+	- But lacks direction
 
 - ROD + TFD + DGTF:
 	- Complete design (ROD)
 	- Quality assurance (TFD)
-	- Careful execution (DGTF)
+	- Thoughtful execution (DGTF)
 	= Deploy high-quality software predictably and sustainably
 
 ---
@@ -699,15 +928,15 @@ but overall faster
 
 - ROD (Structural Safety):
 	- What to build
-	- Prevent confusion during implementation
-	- Prevent bad urgent decisions
+	- Prevent implementation confusion
+	- Prevent poor rushed decisions
 
 - TFD (Quality Assurance):
 	- Does it work correctly
 	- Provide completion criteria
 	- Provide confidence
 
-- DGTF (Safety During Execution):
+- DGTF (Execution Safety):
 	- How to build
 	- Control System 1
 	- Maintain quality under pressure
@@ -716,16 +945,16 @@ but overall faster
 
 ## Core Values
 
-### 1. Strong Theoretical Foundation
-- Scientific basis:
-	- Kahneman (Nobel Prize winner)
-	- Meadows (Systems theory authority)
-	- Altshuller (TRIZ founder)
+### 1. Solid Theoretical Foundation
+- Scientific Basis:
+	- Kahneman (Nobel Laureate)
+	- Meadows (Systems Theory Authority)
+	- Altshuller (TRIZ Founder)
 
-- Practical validation:
-	- Decades of real development experience
+- Real-World Validation:
+	- Decades of actual development experience
 	- Applied to numerous projects
-	- Iterative improvement and refinement
+	- Repeatedly improved and refined
 
 - Result:
 	= Theory + Practice = Reliable methodology
@@ -733,15 +962,15 @@ but overall faster
 
 ### 2. Understands Humans
 
-- Acknowledges human weaknesses:
-	- Make mistakes under pressure (Kahneman)
-	- Miss the whole when seeing only parts (Meadows)
-	- Accustomed to compromise (Altshuller)
+- Acknowledges Human Weaknesses:
+	- We make mistakes under pressure (Kahneman)
+	- We miss the whole when seeing parts (Meadows)
+	- We're accustomed to compromise (Altshuller)
 
-- Compensate with systems:
+- Compensates with Systems:
 	- ROD: Be complete in design phase
 	- TFD: Verify with feedback
-	- DGTF: Enforce carefulness
+	- DGTF: Force thoughtfulness
 
 - Result:
 	= Human + System = Sustainable quality
@@ -750,15 +979,15 @@ but overall faster
 
 ### 3. Universally Applicable
 
-- Language independent:
+- Language Independent:
 	- Go, Java, Python, JavaScript, etc.
 	- Applies to all programming languages
 
-- Domain independent:
-	- Web, mobile, backend, frontend
+- Domain Independent:
+	- Web, Mobile, Backend, Frontend
 	- Applies to all development areas
 
-- Team size independent:
+- Team Size Independent:
 	- From solo developers
 	- To large teams
 
@@ -766,11 +995,11 @@ but overall faster
 
 ### 4. Complementary
 
-- Independent yet connected:
+- Independent yet Connected:
 	- Each can be applied independently
 	- Synergy when applied together
 
-- Gradual adoption possible:
+- Gradual Adoption Possible:
 	- Can start with ROD
 	- Can start with TFD
 	- Can start with DGTF
@@ -780,18 +1009,18 @@ but overall faster
 
 ### 5. Sustainability
 
-- Personal level:
+- Individual Level:
 	- Prevent burnout
 	- Improve expertise
 	- Career growth
 
-- Team level:
+- Team Level:
 	- Consistent productivity
 	- Low turnover
 	- High team morale
 
-- Business level:
-	- Predictable deployments
+- Business Level:
+	- Predictable deployment
 	- Low maintenance costs
 	- Competitive advantage
 
@@ -806,7 +1035,7 @@ but overall faster
 ❌ Try to be perfect
 
 ✅ Start with one feature
-✅ Expand gradually
+✅ Gradually expand
 ✅ Improve with feedback
 ```
 
@@ -815,27 +1044,27 @@ but overall faster
 ### 2. Practice Consistently
 
 - At first:
-	- Feels awkward
-	- Seems slow
+	- Awkward
+	- Feels slow
 
 - After a few weeks:
-	- Gets familiar
-	- Feel the effects
+	- Getting familiar
+	- Seeing effects
 
 - After a few months:
-	- Becomes natural
+	- Natural
 	- Internalized
-	- No longer conscious effort
+	- No longer need to think about it
 
 ---
 
 ### 3. Work with the Team
 
 - Alone:
-	- Personal effects
-	- Has limits
+	- Personal benefits
+	- Limitations exist
 
-- Entire team:
+- Whole team:
 	- Synergy effects
 	- Becomes culture
 	- Sustainable
@@ -851,20 +1080,20 @@ but overall faster
 	- Schedule accuracy
 
 - Improve:
-	- Data-based decisions
+	- Data-driven decisions
 	- Continuous improvement
-	- Adjust to team
+	- Adjust for your team
 
 ---
 
 ## Conclusion
 
-### Key Summary
+### Core Summary
 
 - ROD: "More is better than missing"
 	- Complete service chain in design phase
-	- Prevent confusion in implementation phase
-	- Block System 1's bad urgent decisions
+	- Prevent implementation confusion
+	- Block System 1's poor rushed decisions
 
 - TFD: "Requirements = Tests"
 	- Design tests first
@@ -880,60 +1109,102 @@ but overall faster
 
 ### Essence
 
-These three methodologies are:
+**ROD, TFD, DGTF are:**
 
-**Not just techniques but a philosophy**
-- How to think
-- How to work
-- How to grow
+```
+❌ Not Principles
+❌ Not Rules
+❌ Not Processes
 
-**Understands humans**
-- Acknowledge our weaknesses
-- Utilize our strengths
-- Compensate with systems
+✅ A Way of Thinking
+✅ Habits
+```
 
-**Pursues sustainability**
-- Correctness over speed
-- Quality over quantity
-- Long-term over short-term
+**Think about driving.**  
+
+Basic driving principles:
+- Green light means go
+- Brake pedal stops the car
+- Accelerator moves forward
+
+Does knowing these principles make you a good driver?  
+
+**No.**  
+
+Good drivers have:
+- Continuous attention
+- Situational judgment
+- Consideration for other drivers
+- These as **habits** ingrained in them
+
+**Software is the same.**  
+
+Knowing SOLID, Clean Code, TDD doesn't make you a good developer.  
+Being able to practice these as **habits** makes you a good developer.  
+
+**The difference between principles and habits:**  
+
+```
+Principles/Rules:
+- "You should do this"
+- Externally enforced
+- Follow or break
+- Collapse under pressure
+
+Way of Thinking/Habits:
+- "I think this way"
+- Comes from within
+- Works naturally
+- Persists under pressure
+```
+
+**ROD, TFD, DGTF are methods to build those habits.**
+
+- ROD: "See the whole first" way of thinking
+- TFD: "Define verifiably" way of thinking
+- DGTF: "Don't rush" habit
+
+When these habits are ingrained,  
+you become the "Professional" Clean Coder talks about.  
+Professionals earn trust through results.  
 
 ---
 
 ### Getting Started
 
-From today:
-1. ROD: Write service chains when designing next feature
+Starting today:
+1. ROD: Write service chain when designing next feature
 2. TFD: Define test cases before implementation
-3. DGTF: Pause when feeling the "hurry" impulse
+3. DGTF: Pause when you feel the "hurry" impulse
 
 This week:
 - Apply to one feature
 - Observe results
-- Reflect on feedback
+- Incorporate feedback
 
 This month:
 - Apply to multiple features
-- Share with team members
-- Expand gradually
+- Share with teammates
+- Gradually expand
 
 ---
 
 ### Final Message
 
-> "Good programmers come not from fast typing
->  but from correct thinking"
+> "Good programmers come from correct thinking,
+>  not fast typing"
 
-> "Quality is built not by inspection
->  but by the process"
+> "Quality is built in the process,
+>  not in inspection"
 
-> "Sustainable development starts not from methodology
->  but from attitude"
+> "Sustainable development starts from attitude,
+>  not methodology"
 
 **ROD, TFD, DGTF is that beginning.**
 
 ---
 
-**Document Version**: 1.0  
-**Document Type**: Concepts and Values Explanation  
-**Audience**: All developers  
-**Created**: 2025
+**Document Version**: 1.1
+**Document Type**: Concept and Value Explanation  
+**Audience**: All Developers  
+**Written**: 2025
