@@ -1,3 +1,43 @@
+## 시작하기 전에: What이 아니라 How
+
+이 문서를 읽기 전에 한 가지 질문:
+
+**당신은 Clean Code를 읽었는가?**   
+**SOLID 원칙을 아는가?**   
+**TDD를 들어봤는가?**   
+
+아마 "네"일 것이다.
+
+**그런데 왜 금요일 오후 마감 앞에서 전역 변수를 쓰는가?**
+
+이것이 이 문서의 핵심이다.
+
+```
+많은 개발자:
+"Clean Code? 알아요"
+"SOLID? 알죠"
+"TDD? 들어봤어요"
+
+현실:
+금요일 오후 5시
+매니저: "이거 언제 되나요?"
+→ "일단 전역 변수로..."
+→ "하드코딩하면 빨리..."
+→ "테스트? 나중에..."
+```
+
+**문제는 "What"을 모르는 게 아니다.
+문제는 "How"를 모르는 것이다.**
+
+- What: Clean Code, SOLID, TDD (이미 안다)
+- How: 압박 속에서 어떻게 지키는가? (이것이 필요하다)
+
+**ROD, TFD, DGTF는 "How"에 대한 답이다.**
+
+이 문서는 단순한 방법론 설명이 아니다.
+"알지만 못 하는 것"을 "알고 할 수 있는 것"으로 바꾸는 가이드다.
+
+---
 
 # Part 1: 소프트웨어 개발의 이론적 기반
 
@@ -259,6 +299,60 @@
 
 > 설계 단계에서 완전하게 정의하면 (Meadows: 전체 시스템) 구현 단계에서 불필요한 것은 쉽게 제거할 수 있지만, 누락된 것을 추가하는 것은 위험하다 (Kahneman: System 1 폭주)
 
+### ROD는 새로운 "What"이 아니다
+
+솔직히 말하자.
+
+**ROD가 완전히 새로운 건 아니다:**
+- Clean Architecture? 비슷하다.
+- Service-Oriented Design? 맞다.
+- Domain-Driven Design? 겹치는 부분 있다.
+
+**그런데 질문:**
+
+```
+당신은 Clean Architecture를 안다.
+당신은 SOLID를 안다.
+당신은 의존성 주입을 안다.
+
+그런데 왜?
+마감이 다가오면 안 지키는가?
+왜 "일단 되게 하고 나중에 고치자"가 되는가?
+```
+
+**ROD는 새로운 기술이 아니다.**  
+ROD는 좋은 설계를 **"왜"**, **"언제"**, **"어떻게"** 해야 하는지에 대한 답이다.
+
+**비교:**
+
+```
+Clean Architecture:
+"이렇게 구조를 만들어라"
+→ What (무엇을)
+
+ROD:
+"왜 이렇게 해야 하는지" (Kahneman: System 1 방지)
+"언제 이렇게 해야 하는지" (설계 단계에서)
+"어떻게 지킬 수 있는지" (Constructor/Static 금지)
+→ Why + When + How
+```
+
+**실전 차이:**
+
+```
+Clean Architecture 아는 개발자:  
+설계 단계: "의존성 역전 적용해야지"
+구현 단계 (압박): "아 시간 없어, 일단 new로..."
+→ 원칙은 알지만 지키지 못함
+
+ROD를 체화한 개발자:
+설계 단계: "서비스 체인 완성해야 System 1 방지"
+구현 단계 (압박): "서비스 체인 따라가기만 하면 돼"
+→ 습관이 되어 자동으로 지킴
+```
+
+----------
+
 ### 이론적 배경
 
 **Systems Thinking 관점 (Meadows):**
@@ -313,6 +407,145 @@
 	- 큰 시스템을 서비스로 분할
 	- 각각 독립적으로 개발/테스트
 	- 교체 가능 (SOLID)
+
+### 변경의 격리 - ROD의 진짜 힘
+
+**현실을 인정하자:**
+
+아무리 완벽하게 설계해도,  
+구현 중에 변경은 일어난다.
+
+- 요구사항이 바뀐다
+- 더 나은 방법을 발견한다
+- 버그를 고쳐야 한다
+
+**문제는 변경 자체가 아니다.  
+문제는 변경이 전체로 퍼지는 것이다.**
+
+**실전 예시 - 변경이 퍼지는 경우:**
+
+```go
+// ❌ 나쁜 설계: 직접 의존
+type LoginHandler struct {
+    db *sql.DB  // 직접 의존
+}
+
+func (h *LoginHandler) Login(username, password string) (*User, error) {
+    // DB 직접 접근
+    row := h.db.QueryRow("SELECT * FROM users WHERE username = ?", username)
+    
+    // 비밀번호 검증도 여기서
+    if !checkPassword(user.Password, password) {
+        return nil, errors.New("invalid password")
+    }
+    
+    // 세션 생성도 여기서
+    session := createSession(user)
+    
+    // 토큰 생성도 여기서
+    token := generateToken(session)
+    
+    return user, nil
+}
+
+// 문제: 비밀번호 검증 방식 변경 요청
+// → LoginHandler 수정 필요
+// → 테스트 전체 수정
+// → 세션 로직에 영향?
+// → 토큰 로직에 영향?
+// → System 1: "일단 여기 고치고... 저기도 고치고..."
+```
+
+**실전 예시 - ROD로 변경이 격리되는 경우:**
+
+```go
+// ✅ ROD 설계: 서비스 체인
+
+// 각 서비스는 독립적
+type PasswordVerifier interface {
+    Verify(plain, hashed string) (bool, error)
+}
+
+type UserFinder interface {
+    FindByUsername(username string) (*User, error)
+}
+
+type SessionCreator interface {
+    Create(user *User) (*Session, error)
+}
+
+type TokenGenerator interface {
+    Generate(session *Session) (string, error)
+}
+
+// LoginService는 체인만 연결
+type LoginService struct {
+    userFinder     UserFinder
+    passwordVerifier PasswordVerifier
+    sessionCreator SessionCreator
+    tokenGenerator TokenGenerator
+}
+
+func (s *LoginService) Login(username, password string) (string, error) {
+    user, err := s.userFinder.FindByUsername(username)
+    if err != nil {
+        return "", err
+    }
+    
+    valid, err := s.passwordVerifier.Verify(password, user.HashedPassword)
+    if err != nil || !valid {
+        return "", errors.New("invalid credentials")
+    }
+    
+    session, err := s.sessionCreator.Create(user)
+    if err != nil {
+        return "", err
+    }
+    
+    return s.tokenGenerator.Generate(session)
+}
+
+// 비밀번호 검증 방식 변경?
+// → PasswordVerifier 구현체만 교체
+// → 다른 서비스 영향 없음
+// → LoginService 코드 변경 없음
+// → 테스트도 PasswordVerifier만 수정
+```
+
+**"서비스의 끝"과 "다음 서비스의 시작" 사이 계약:**
+
+```
+┌──────────────────┐    계약(Interface)   ┌──────────────────┐
+│  UserFinder      │ ──────────────────→ │  PasswordVerifier │
+│                  │      *User          │                   │
+│  내부 구현:      │                      │  내부 구현:       │
+│  - SQL? NoSQL?   │                     │  - bcrypt? argon2?│
+│  - 캐시? 직접?   │                      │  - 외부 서비스?   │
+│                  │                     │                   │
+│  자유롭게 변경   │                      │  자유롭게 변경    │
+└──────────────────┘                     └──────────────────┘
+
+계약(Interface)만 유지하면:
+- 내부는 자유롭게 바꿀 수 있다
+- 다른 서비스에 영향 없다
+- System 1이 활성화되어도 피해가 한 서비스로 제한된다
+```
+
+**이것이 SOLID를 "왜" 지켜야 하는지의 진짜 이유다:**
+
+구현 단계에서 요구사항이 자주 변경됨   
+→ 각 서비스를 인터페이스로 정의 (교체 가능)   
+→ 요구사항 변경 = 서비스 교체   
+→ 다른 부분 영향 없음   
+→ System 1의 나쁜 긴급 결정 불필요   
+
+- Single Responsibility: 각 서비스는 하나의 책임 → 변경 범위 최소화
+- Open-Closed: 확장에 열림, 수정에 닫힘 → 기존 코드 보호
+- Liskov Substitution: 서비스 교체 가능 → 유연한 대응
+- Interface Segregation: 필요한 인터페이스만 → 불필요한 의존 제거
+- Dependency Inversion: 인터페이스에 의존 → 변경 격리
+
+----------
 
 ### 구현 단계의 문제
 
@@ -697,6 +930,159 @@ Kahneman:
 -   완료 기준
 -   피드백 루프 (Meadows)
 
+
+### Test = Requirement: 더 많은 실전 예시
+
+**테스트가 요구사항이다** - 이것을 더 깊이 이해하자.
+
+**예시 1: 결제 시스템**
+
+```
+❌ 전통적 요구사항 (모호함):
+"사용자가 결제할 수 있어야 한다"
+
+→ 카드 실패하면?
+→ 잔액 부족하면?
+→ 중복 결제 방지는?
+→ 부분 환불은?
+```
+
+```go
+// ✅ TFD 요구사항 (테스트로 정의):
+
+func TestPaymentService(t *testing.T) {
+    // 정상 케이스
+    t.Run("ValidPayment_ShouldSucceed", func(t *testing.T) {
+        // 올바른 카드, 충분한 잔액 → 결제 성공, 영수증 반환
+    })
+    
+    // 카드 에러
+    t.Run("InvalidCard_ShouldReturnCardError", func(t *testing.T) {
+        // 잘못된 카드 번호 → CardError, 결제 안 됨
+    })
+    
+    t.Run("ExpiredCard_ShouldReturnExpiredError", func(t *testing.T) {
+        // 만료된 카드 → ExpiredCardError
+    })
+    
+    // 잔액 에러
+    t.Run("InsufficientFunds_ShouldReturnFundsError", func(t *testing.T) {
+        // 잔액 부족 → InsufficientFundsError, 결제 안 됨
+    })
+    
+    // 중복 방지
+    t.Run("DuplicatePayment_ShouldReturnDuplicateError", func(t *testing.T) {
+        // 같은 주문 2번 결제 시도 → DuplicatePaymentError
+    })
+    
+    // 부분 환불
+    t.Run("PartialRefund_ShouldRefundPartialAmount", func(t *testing.T) {
+        // 10000원 중 3000원 환불 → 3000원 환불, 7000원 유지
+    })
+    
+    // 전체 환불
+    t.Run("FullRefund_ShouldRefundFullAmount", func(t *testing.T) {
+        // 전체 금액 환불 → 전체 환불, 주문 취소 상태
+    })
+    
+    // 동시성
+    t.Run("ConcurrentPayments_ShouldHandleCorrectly", func(t *testing.T) {
+        // 동시에 같은 주문 결제 → 하나만 성공
+    })
+}
+
+// 이 테스트들이 요구사항이다.
+// PM이 "중복 결제 방지해주세요"라고 하면?
+// → DuplicatePayment 테스트가 통과하면 완료.
+```
+
+**예시 2: 검색 시스템**
+
+```
+❌ 전통적 요구사항:
+"사용자가 상품을 검색할 수 있어야 한다"
+
+→ 결과 없으면?
+→ 오타 교정은?
+→ 정렬 기준은?
+→ 페이지네이션은?
+→ 필터링은?
+```
+
+```go
+// ✅ TFD 요구사항:
+
+func TestSearchService(t *testing.T) {
+    // 정상 케이스
+    t.Run("ValidQuery_ShouldReturnResults", func(t *testing.T) {
+        // "노트북" 검색 → 노트북 상품 목록 반환
+    })
+    
+    // 결과 없음
+    t.Run("NoResults_ShouldReturnEmptyList", func(t *testing.T) {
+        // "asdfqwer" 검색 → 빈 목록, 에러 아님
+    })
+    
+    // 오타 교정
+    t.Run("Typo_ShouldSuggestCorrection", func(t *testing.T) {
+        // "노트붘" 검색 → "노트북으로 검색하시겠습니까?" 제안
+    })
+    
+    // 정렬
+    t.Run("SortByPrice_ShouldReturnSortedResults", func(t *testing.T) {
+        // 가격순 정렬 → 가격 오름차순 결과
+    })
+    
+    t.Run("SortByRelevance_ShouldReturnRelevantFirst", func(t *testing.T) {
+        // 관련도순 정렬 → 관련도 높은 것 먼저
+    })
+    
+    // 페이지네이션
+    t.Run("Pagination_ShouldReturnCorrectPage", func(t *testing.T) {
+        // 2페이지 요청 → 21-40번째 결과
+    })
+    
+    t.Run("LastPage_ShouldReturnRemainingItems", func(t *testing.T) {
+        // 마지막 페이지 → 남은 항목들, hasNext=false
+    })
+    
+    // 필터링
+    t.Run("PriceFilter_ShouldFilterByPrice", func(t *testing.T) {
+        // 10만원-50만원 필터 → 해당 가격대만
+    })
+    
+    t.Run("CategoryFilter_ShouldFilterByCategory", func(t *testing.T) {
+        // 전자제품 필터 → 전자제품만
+    })
+    
+    // 조합
+    t.Run("MultipleFilters_ShouldApplyAll", func(t *testing.T) {
+        // 가격 + 카테고리 + 정렬 → 모두 적용된 결과
+    })
+}
+```
+
+**핵심:**
+
+```
+테스트 = 요구사항 = 계약
+
+요구사항이 바뀌면?
+→ 테스트를 바꾼다.
+→ 테스트가 통과하면 요구사항을 만족한 것이다.
+
+PM: "검색 결과 없을 때 추천 상품 보여주세요"
+→ 새 테스트 추가: NoResults_ShouldShowRecommendations
+→ 테스트 통과시키면 완료
+
+진실의 단일 원천 (Single Source of Truth):
+- ❌ 요구사항 문서 (오래됨, 모호함)
+- ❌ 코드 주석 (업데이트 안 됨)
+- ✅ 테스트 (실행 가능, 항상 최신, 명확)
+```
+
+----------
+
 ### 이론적 배경
 
 **Systems Thinking 관점 (Meadows):**
@@ -757,33 +1143,97 @@ Kahneman:
 	- 테스트가 실수 잡아줌
 	- 자신감 제공
 
+----------
 
-### TFD vs TDD
+### TFD와 TDD의 관계
 
-**차이점:**
+**TDD를 시도해본 적 있는가?**
 
-- TDD (Test-Driven Development):
-	- 테스트 작성 → 구현 → 리팩토링
-	- Red-Green-Refactor 사이클
-	- 주로 단위 테스트
-	- 기법 중심
+```
+시도 1:
+"테스트 먼저 쓰래서..."
+→ "뭘 테스트하지?"
+→ 막막함
+→ "일단 구현하고 테스트 쓸까..."
+→ 포기
 
-- TFD (Test-First Development):
-	- 설계 (ROD) → 테스트 설계 → 구현
-	- 모든 레벨의 테스트
-	- 요구사항 = 테스트
-	- 철학 중심
+시도 2:
+"Red → Green → Refactor!"
+→ 첫 테스트 작성
+→ "이게 맞는 건가?"
+→ 구현하다 보니 테스트 구조 다 바뀜
+→ "TDD 너무 어렵다"
+→ 포기
 
-- TFD가 더 포괄적:
-	- 단위 테스트
-	- 통합 테스트
-	- E2E 테스트
-	- 성능 테스트
-	- 보안 테스트
+시도 3:
+"간단한 거부터..."
+→ 유틸 함수 테스트 작성
+→ "이건 쉽네!"
+→ 복잡한 비즈니스 로직
+→ "여기서 뭘 테스트하지?"
+→ 포기
+```
 
-- Systems Thinking:
-	TFD = 전체 시스템의 피드백
-	TDD = 부분 요소의 피드백
+**TDD가 어려운 진짜 이유:**
+
+```
+TDD의 전제:
+"테스트가 설계를 이끈다"
+
+현실:
+설계 없이 테스트부터?
+→ "뭘 테스트해야 하는지" 모름
+→ 테스트 구조가 계속 바뀜
+→ "내가 뭘 만들고 있는 거지?"
+```
+
+**TFD는 TDD를 부정하지 않는다.
+TFD는 TDD를 더 쉽게 만든다.**
+
+```
+TDD:
+테스트 → 구현 → 리팩토링
+"테스트가 설계를 이끈다"
+
+TFD:
+설계(ROD) → 테스트 → 구현
+"설계가 테스트를 정의한다"
+```
+
+**TFD가 쉬운 이유:**
+
+```
+ROD 완료 후:
+LoginService
+├── UserFinder.FindByUsername()
+├── PasswordVerifier.Verify()
+├── SessionCreator.Create()
+└── TokenGenerator.Generate()
+
+각 서비스의 입력/출력이 명확하다.
+"이 서비스의 계약을 테스트하면 된다"
+
+UserFinder 테스트:
+- 입력: username (string)
+- 출력: *User 또는 error
+- 테스트: 존재하는 유저, 없는 유저, 빈 문자열...
+
+뭘 테스트할지 명확하다.
+```
+
+**결론:**
+
+```
+TDD를 잘 하고 있다면?
+→ 축하한다. 계속하라.
+
+TDD가 어려웠다면?
+→ ROD 먼저 해보라.
+→ 서비스 체인이 있으면 테스트가 뭘 써야 하는지 보인다.
+```
+
+
+
 
 ### ROD와 TFD의 결합
 
