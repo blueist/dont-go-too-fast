@@ -709,8 +709,7 @@ People who have the "Wow" moment:
 "Hold on, let me think about this..."
 ```
 
-This brief moment of doubt - this is the "Wow".
-Tom DeMarco calls it "Slack" - that space where reflection becomes possible.
+This brief moment of doubt - this is the "Wow" - that space where reflection becomes possible.
 
 **Without Wow:**
 - 100% System 1 state
