@@ -1530,6 +1530,51 @@ Thoughtfulness is:
 -   Smooth is ultimately fast
 -   Because no rework
 
+### Prerequisite: The "Wow" Moment
+
+**DGTF has a prerequisite.**
+
+DGTF's first step is "Recognize" - recognizing that System 1 is activating.
+But here's the paradox:
+
+> When System 1 is fully active, you don't know you're in System 1.
+
+**So who can use DGTF?**
+
+People who have the "Wow" moment:
+```
+"Wait... is this right?"
+"Hmm, something feels off..."
+"Hold on, let me think about this..."
+```
+
+This brief moment of doubt - this is the "Wow".
+
+**Without Wow:**
+- 100% System 1 state
+- "Recognize" is impossible
+- DGTF cannot be applied
+- → First, create conditions for Wow to happen
+
+**With Wow:**
+- A door opens briefly
+- But without knowing what to do, the door closes
+- System 1 says "It's fine, let's go" and moves on
+- → DGTF provides the method to use that moment
+
+**Critical Insight:**
+
+```
+Wow alone is not enough.
+Wow + DGTF = Success
+
+Without DGTF, Wow is just a missed opportunity.
+Without Wow, DGTF cannot even start.
+```
+
+**This is why DGTF must be learned BEFORE Wow happens.**
+When Wow comes, you need to know what to do immediately.
+
 ### Theoretical Background
 
 **Kahneman Perspective:**
@@ -1679,6 +1724,51 @@ Thoughtfulness is:
 	  + Systems thinking (Meadows)
 	  + Problem solving (TRIZ)
 	```
+
+### The LA Analogy
+
+**A manager tells the team: "Go to LA. Fast."**
+
+```
+Person D: Starts running toward LA immediately.
+          "He said fast! I must go now!"
+          → Most effort, slowest result
+
+Person C: Grabs a bicycle.
+          "At least I'm doing something..."
+          → Compromise, still slow
+
+Person A: Goes home to get his car.
+          "Let me get the right tool first."
+          → Seems like going backward, but faster
+
+Person B: Searches for airplane schedules.
+          "What's the fastest way?"
+          → Seems like doing nothing, but fastest
+```
+
+**From the outside:**
+- D looks the most hardworking (running!)
+- A looks like he's going the wrong direction
+- B looks like he's just sitting there
+
+**But the result is the opposite.**
+
+**This is DGTF.**
+
+When someone says "Fast!":
+- System 1 (D): "Yes!" → Start running
+- DGTF (A/B): "Wait, what's the fastest way to get there?"
+
+**The person who pauses to think beats the person who rushes to fail.**
+
+Even in real emergencies, DGTF applies.
+The difference is 5 seconds of pause instead of 5 minutes.
+But it's still: Stop → Think → Act.
+
+"This time it's really urgent, no time for DGTF!" 
+→ This is exactly what System 1 says.
+→ And it's exactly when DGTF is most needed.
 
 ### Self-Control Creates the Professional
 
@@ -1919,7 +2009,56 @@ Developer with DGTF:
 	   
 	   Long-term benefit"
 
-### "DGTF ≠ Slow" (TRIZ Contradiction Resolution)
+### "DGTF ≠ Slow, DGTF ≠ Willpower" (TRIZ Contradiction Resolution)
+
+**Common Misconceptions:**
+```
+❌ DGTF = Work slowly
+❌ DGTF = Low productivity
+❌ DGTF = Requires willpower to resist rushing
+❌ DGTF = Enduring the urge to go fast
+```
+
+**Truth:**
+```
+✅ DGTF = Work thoughtfully
+✅ DGTF = Quality first
+✅ DGTF = Sustainable pace
+✅ DGTF = More effective, not more effortful
+```
+
+**DGTF does not consume willpower. It saves energy.**
+
+```
+Without DGTF:
+  Rush → Bug → Debug → Fix → New bug → More debug
+  → Exhaustion → More mistakes → Cycle continues
+  → Energy drained
+
+With DGTF:
+  Think → Implement correctly → Done
+  → Energy saved → Better decisions → Positive cycle
+```
+
+**The Agile Analogy:**
+
+Some teams say: "This project is easy, let's do Agile."
+
+This is backwards.
+
+Agile is MORE effective for HARD projects.
+Easy projects can survive any methodology.
+
+**DGTF is the same.**
+
+```
+❌ "I have time, so I'll use DGTF"
+✅ "I'm under pressure, so I NEED DGTF"
+```
+
+The harder the situation, the more DGTF helps.
+DGTF is not a luxury for relaxed times.
+DGTF is a necessity for difficult times.
 
 **Paradox:**
 
@@ -2037,6 +2176,52 @@ DGTF saves 4 hours (36%)!
 - ROD: Complete design
 	Systems Thinking: Understand whole
 	DGTF: Thoughtful progress
+
+### What DGTF Does NOT Solve
+
+**DGTF is not a solution for everything.**
+
+Being clear about its boundaries prevents false promises and disappointment.
+
+**DGTF does NOT fix:**
+
+1. **Toxic Organizations**
+   - If "slow and careful" gets you fired
+   - If unreasonable deadlines are the norm
+   - If quality is punished, not rewarded
+   → This is not a DGTF problem. This is an environment problem.
+
+2. **Irrational Managers**
+   - If careful work is not recognized
+   - If only "looking busy" matters
+   - If results don't earn trust
+   → DGTF cannot change other people's attitudes.
+
+3. **Fundamentally Broken Systems**
+   - Legacy code that needs complete rewrite
+   - Architectural problems beyond individual control
+   → DGTF is for prevention, not repair.
+
+**The Answer: Escape.**
+
+```
+If the environment doesn't allow DGTF:
+Option 1: Leave that environment.
+Option 2: Apply DGTF within the small scope you can control.
+```
+
+**Option 2 is key:**
+
+DGTF is an internal process.
+- Taking 3 seconds to think before typing - nobody notices.
+- Checking the design before coding - invisible to others.
+- Pausing when you feel "hurry" - only you know.
+
+**From the outside, you look the same.**
+**Only the results are better.**
+
+DGTF is not about declaring to your organization.
+DGTF is about quietly controlling yourself.
 
 ### Practical Tips (Integrated Application)
 
@@ -4152,10 +4337,71 @@ Month 7-12:
 ❌ Not Principles
 ❌ Not Rules
 ❌ Not Processes
+❌ Not Knowledge
 
 ✅ A Way of Thinking
 ✅ Habits
+✅ Training
 ```
+
+**The Critical Distinction: Understanding vs. Doing**
+
+```
+Understanding:
+- Read this document → "I get it"
+- Nod along → "Makes sense"
+- Agree with everything → "I'll do this"
+→ This is System 1 saying "Got it, next!"
+
+Doing:
+- Apply tomorrow → Struggle
+- Fail → Learn
+- Try again → Slightly better
+- Repeat → Eventually natural
+→ This is building habit through training
+```
+
+**Understanding ≠ Doing**
+
+You can understand DGTF in 10 minutes.
+You cannot DO DGTF without months of practice.
+
+**Training, Not Learning**
+
+```
+Learning: Acquire knowledge (one-time)
+Training: Build habit (continuous)
+
+You don't "learn" to drive well.
+You "train" to drive well.
+
+You don't "learn" DGTF.
+You "train" DGTF.
+```
+
+**Crossing the Hurdle is Not the End**
+
+```
+❌ "I applied DGTF once successfully!"
+   → Finished? No. Tomorrow the pressure returns.
+
+✅ "I applied DGTF today. I'll do it again tomorrow."
+   → And the day after. And the week after.
+   → Until it's no longer conscious effort.
+```
+
+**The Hardest Part**
+
+The hardest thing about DGTF is not understanding it.
+The hardest thing is:
+- Keeping curiosity alive
+- Maintaining doubt ("Is this really right?")
+- Practicing continuously
+- Not stopping after the first success
+
+**This requires not technique, but attitude.**
+
+---
 
 **Think about driving.**
 
@@ -4625,7 +4871,7 @@ ROD + TFD + DGTF:
 
 ----------
 
-**Document Version**: 2.0 
+**Document Version**: 2.1 
 **Theory Foundation**:
 -   Daniel Kahneman: Thinking, Fast and Slow (2011)
 -   Donella H. Meadows: Thinking in Systems (2008)
@@ -4633,4 +4879,11 @@ ROD + TFD + DGTF:
 
 **Author**: Decades of software engineering experience + Three validated theories  
 **Audience**: Mid-level Junior Developers  
-**Last Updated**: 2025
+**Last Updated**: 2026-01
+
+**Changes in 2.1:**
+- Added "Prerequisite: The Wow Moment" section in DGTF
+- Added "The LA Analogy" section
+- Added "What DGTF Does NOT Solve" section
+- Enhanced "DGTF ≠ Slow" with willpower clarification
+- Strengthened "Essence" section with Training vs Learning distinction
