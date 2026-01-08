@@ -814,14 +814,6 @@ When Wow comes, you need to know what to do immediately.
 **A manager tells the team: "Go to LA. Fast."**
 
 ```
-Person D: Starts running toward LA immediately.
-          "He said fast! I must go now!"
-          → Most effort, slowest result
-
-Person C: Grabs a bicycle.
-          "At least I'm doing something..."
-          → Compromise, still slow
-
 Person A: Goes home to get his car.
           "Let me get the right tool first."
           → Seems like going backward, but faster
@@ -829,6 +821,14 @@ Person A: Goes home to get his car.
 Person B: Searches for airplane schedules.
           "What's the fastest way?"
           → Seems like doing nothing, but fastest
+
+Person C: Grabs a bicycle.
+          "At least I'm doing something..."
+          → Compromise, still slow
+
+Person D: Starts running toward LA immediately.
+          "He said fast! I must go now!"
+          → Most effort, slowest result
 ```
 
 **From the outside:**
