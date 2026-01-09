@@ -94,7 +94,7 @@ SOLID를 안다고 좋은 개발자가 아닙니다.
 - 주니어 개발자는 시니어의 도움이 필요합니다
 - 읽는다고 바로 할 수 있는 게 아닙니다—수개월의 연습이 필요합니다
 
-자세한 한계와 대응 방법은 [실전 가이드의 "어려운 질문들"](docs/ko/02-practical-guide.md#어려운-질문들-악마의-변호인) 섹션을 참고하세요.
+자세한 한계와 대응 방법은 실전 가이드의 "어려운 질문들" 섹션을 참고하세요.
 
 ### 문서
 
@@ -215,7 +215,7 @@ This methodology is not perfect:
 - Junior developers need guidance from seniors
 - Reading doesn't mean doing—it requires months of practice
 
-For detailed limitations and how to address them, see the ["Hard Questions" section](docs/en/02-practical-guide.md#hard-questions-devils-advocate) in the Practical Guide.
+For detailed limitations and how to address them, see the "Hard Questions" section in the Practical Guide.
 
 ### Documentation
 
