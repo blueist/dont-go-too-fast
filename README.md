@@ -85,18 +85,37 @@ SOLID를 안다고 좋은 개발자가 아닙니다.
 
 이 방법론은 좋은 개발을 **습관**으로 만드는 방법입니다.  
 
+### 솔직한 한계
+
+이 방법론은 완벽하지 않습니다:
+
+- 독성적인 조직 환경을 고칠 수 없습니다
+- 의지력이 바닥났을 때 마법처럼 작동하지 않습니다
+- 주니어 개발자는 시니어의 도움이 필요합니다
+- 읽는다고 바로 할 수 있는 게 아닙니다—수개월의 연습이 필요합니다
+
+자세한 한계와 대응 방법은 [실전 가이드의 "어려운 질문들"](docs/ko/02-practical-guide.md#어려운-질문들-악마의-변호인) 섹션을 참고하세요.
+
 ### 문서
 
-- 📖 [핵심 개념과 가치](docs/ko/01-concepts-and-values.md)
-- 📚 [실전 가이드](docs/ko/02-practical-guide.md)
+| 문서 | 내용 | 읽는 순서 |
+|------|------|-----------|
+| 📖 [핵심 개념](docs/ko/01-core-concepts.md) | WHY - 이론적 기반과 철학 | 1️⃣ 먼저 |
+| 📚 [실전 가이드](docs/ko/02-practical-guide.md) | HOW - 구체적 방법과 예제 | 2️⃣ 다음 |
 
 ### 시작하기
+
 ```bash
 # 1. 간단한 기능 하나 선택
 # 2. ROD로 서비스 체인 설계
 # 3. TFD로 테스트 케이스 정의
 # 4. DGTF로 신중하게 구현
 ```
+
+**오늘 시작할 수 있는 것:**
+1. ROD: 다음 기능 설계할 때 서비스 체인 먼저 그리기
+2. TFD: 구현 전에 테스트 케이스 정의하기
+3. DGTF: "급하다" 느낄 때 3초 멈추기
 
 ### 누구를 위한 방법론인가?
 
@@ -108,7 +127,6 @@ SOLID를 안다고 좋은 개발자가 아닙니다.
 ### 라이선스
 
 MIT License - 자유롭게 사용, 수정, 배포하세요.
-
 ---
 
 ## English
@@ -188,18 +206,37 @@ Knowing SOLID doesn't make you a good developer.
 
 This methodology is about making good development a **habit**.
 
+### Honest Limitations
+
+This methodology is not perfect:
+
+- It cannot fix toxic organizational environments
+- It doesn't work magically when willpower is depleted
+- Junior developers need guidance from seniors
+- Reading doesn't mean doing—it requires months of practice
+
+For detailed limitations and how to address them, see the ["Hard Questions" section](docs/en/02-practical-guide.md#hard-questions-devils-advocate) in the Practical Guide.
+
 ### Documentation
 
-- 📖 [Core Concepts and Values](docs/en/01-concepts-and-values.md)
-- 📚 [Practical Guide](docs/en/02-practical-guide.md)
+| Document | Content | Reading Order |
+|----------|---------|---------------|
+| 📖 [Core Concepts](docs/en/01-core-concepts.md) | WHY - Theoretical foundation and philosophy | 1️⃣ First |
+| 📚 [Practical Guide](docs/en/02-practical-guide.md) | HOW - Concrete methods and examples | 2️⃣ Next |
 
 ### Getting Started
+
 ```bash
 # 1. Choose one simple feature
 # 2. Design service chain with ROD
 # 3. Define test cases with TFD
 # 4. Implement thoughtfully with DGTF
 ```
+
+**What you can start today:**
+1. ROD: Draw a service chain before designing your next feature
+2. TFD: Define test cases before implementation
+3. DGTF: Pause for 3 seconds when you feel "urgent"
 
 ### Who Is This For?
 
@@ -228,4 +265,4 @@ For questions or discussions, please open an issue.
 
 ---
 
-**Remember: Don't Go Too Fast** 🐢💨
+**Remember: Don't Go Too Fast** 🐢
