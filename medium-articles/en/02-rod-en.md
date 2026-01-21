@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/C5K0Tv1h/02.png)
+
 *This is Part 2 of a series on maintaining software quality under pressure. [Read Part 1: Why Good Developers Make Bad Decisions Under Pressure]()*
 
 ---

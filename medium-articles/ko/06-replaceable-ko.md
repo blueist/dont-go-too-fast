@@ -2,6 +2,8 @@
 
 ---
 
+![image](https://i.ibb.co/9kmNkSYg/06.png)
+
 개발자가 파일을 복사한다.
 붙여넣는다.
 조금 수정한다.

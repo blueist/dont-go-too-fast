@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/qM9c8LY9/04.png)
+
 *This is Part 4 of a series on maintaining software quality under pressure. [Read Part 3: TFD—Requirements = Tests]()*
 
 ---

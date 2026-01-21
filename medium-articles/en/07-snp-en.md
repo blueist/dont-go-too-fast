@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/chsvxnV2/07.png)
+
 *This article is part of the series "A Software Development Philosophy for Maintaining Quality Under Pressure."*
 
 ---

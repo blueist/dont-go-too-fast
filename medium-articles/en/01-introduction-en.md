@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/C5K0Tv1h/02.png)
+
 **It's Friday afternoon, 4 PM.**
 
 Your manager walks over. "There's a bug in production. Can you fix it before you leave?"

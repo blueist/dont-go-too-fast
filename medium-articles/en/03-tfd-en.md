@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/BdnC3hj/03.png)
+
 *This is Part 3 of a series on maintaining software quality under pressure. [Read Part 2: ROD—Design Complete, Implement Fast]()*
 
 ---

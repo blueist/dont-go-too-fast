@@ -569,6 +569,8 @@ When these accumulate, the pond becomes clean.
 
 ---
 
+![image](https://i.ibb.co/xK0LTn91/08.png)
+
 **Do you really want to escape?**
 
 If so, start today.

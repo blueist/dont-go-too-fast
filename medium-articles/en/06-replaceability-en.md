@@ -2,6 +2,8 @@
 
 ---
 
+![image](https://i.ibb.co/9kmNkSYg/06.png)
+
 A developer copies a file.
 Pastes.
 Modifies a little.

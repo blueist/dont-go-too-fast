@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/xK0LTn91/08.png)
+
 *이 글은 "압박 속에서 품질을 유지하는 소프트웨어 개발 철학" 시리즈의 여덟 번째입니다.*
 
 *이것은 개선(Improvement)이 아니다. 생존을 위한 복구(Restoration)다.*

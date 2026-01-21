@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/N2qbLv3w/05.png)
+
 *This is Part 5 (Final) of a series on maintaining software quality under pressure. [Read Part 4: DGTF—Slow is Smooth, Smooth is Fast]()*
 
 ---
