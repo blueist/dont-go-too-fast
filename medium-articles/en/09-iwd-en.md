@@ -70,7 +70,7 @@ We solved the wrong problem.
 
 ## Nouns vs Verbs
 
-Here's what I discovered after 34 years.
+Here's what I discovered after 25 years.
 
 **Requirements spoken as nouns are usually wrong.**
 
