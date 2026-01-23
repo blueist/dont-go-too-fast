@@ -2,6 +2,7 @@
 
 *IWD Deep Dive Series — Part 1*
 
+![image](https://i.ibb.co/YB8qfJ5v/Gemini-Generated-Image-fbn622fbn622fbn6.png)
 ---
 
 ## The Castle Built on Sand
