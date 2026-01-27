@@ -4,6 +4,8 @@
 
 ---
 
+![image](https://i.ibb.co/ns87LLYP/w04.png)
+
 ## The Owner Still Speaks in Nouns
 
 You found the real "I."
@@ -184,8 +186,6 @@ Record the state of requirements with each question. Just having the team recogn
 *Part 6 will explore how to systematically track these states across your project.*
 
 ---
-
-![image](https://i.ibb.co/ns87LLYP/w04.png)
 
 ## What's Next?
 
