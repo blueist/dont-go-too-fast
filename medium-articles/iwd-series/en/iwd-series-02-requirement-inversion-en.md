@@ -205,15 +205,21 @@ Don't Go Too Fast. 🐢
 
 ---
 
+## What's Next?
+You've learned to flip nouns into verbs. But whose verb is it? The messenger? The manager? The real sufferer?
+**Part 3: "Who is 'I'?"** shows how to find the true problem owner—because wrong "I" means wrong destination.
+
+---
+
 *Part 2 of the IWD Deep Dive Series.*
 
 **Series:**
 1. The Fear — Why direction matters
 2. **Requirement Inversion** ← You are here
-3. Who is "I"? (Coming)
-4. WHI: The Dual Tool (Coming)
-5. Even Laws Can Be Verbs (Coming)
-6. State Tracking (Coming)
+3. Who is "I"? 
+4. WHI: The Dual Tool 
+5. Even Laws Can Be Verbs 
+6. State Tracking 
 
 ---
 

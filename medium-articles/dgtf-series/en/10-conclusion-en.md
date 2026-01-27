@@ -1,8 +1,10 @@
-**DGTF++: The Map**
+# DGTF++: The Map
 
 ![image](https://i.ibb.co/bMwqNV9d/10.png)
 ---
-*"This is the final article in the series "A Software Development Philosophy for Maintaining Quality Under Pressure.""*
+
+*"This is the final article in the series "A Software Development Philosophy for Maintaining Quality Under Pressure."*
+
 ---
 
 Nine articles later, I want to explain what I was actually trying to build. Not a methodology. Not a framework. A map.
