@@ -200,7 +200,7 @@ Now that you've found the true owner "I," you need a tool to excavate their vagu
 
 **Series:**
 1. The Fear — Why direction matters
-2. Requirement Inversion — Verbs over nouns
+2. Requirement Inversion
 3. **Who is "I"?** ← You are here
 4. WHI: The Dual Tool 
 5. Even Laws Can Be Verbs 

@@ -126,9 +126,9 @@ From Part 1 to Part 5, we've learned the core tools of IWD. But how do we **mana
 
 **Series:**
 1. The Fear — Why direction matters
-2. Requirement Inversion — Verbs over nouns
-3. Who is "I"? — Finding the real owner
-4. WHI: The Dual Tool — Dismantling nouns
+2. Requirement Inversion
+3. Who is "I"?
+4. WHI: The Dual Tool
 5. **Even Laws Can Be Verbs** ← You are here
 6. State Tracking 
 

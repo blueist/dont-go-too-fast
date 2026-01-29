@@ -268,26 +268,21 @@ Just slow enough to keep moving.
 **LinkedIn Article 5: Dirty Pond**
 ---
 
-Everyone says they want clean code.
+Do you have that one file no one touches?
+Do you want to fix it?
 
-I'm not sure that's true.
-
-Because clean code requires something uncomfortable first: touching dangerous code.
+I have one too.
+But I'm not sure I really want to fix it.
+Because fixing it requires something uncomfortable first: touching dangerous code.
 
 ---
-
-There was a file no one touched.
-
-Not because it was long or complex. Because everyone was afraid of it.
 
 "Don't change that one."
 "It might break something."
 "It's been like that forever."
 
 So I started asking a different question.
-
 Not "how do we clean this?"
-
 But: "Do we really want to clean this?"
 
 ---
@@ -304,7 +299,9 @@ That choice — repeated enough times — creates what I call a Dirty Pond.
 
 A Dirty Pond isn't dirty because people are lazy.
 It's dirty because people are afraid.
+
 Fear changes behavior. No small refactors. No naming fixes. No tests. Just avoidance.
+
 And avoidance doesn't freeze the problem. It feeds it.
 
 ---
@@ -321,7 +318,6 @@ Not a technical loop. An emotional one.
 ---
 
 Most teams try to skip the hard question.
-
 They jump straight to solutions. "Let's refactor later." "Let's rewrite it." "Let's document it better."
 
 But if the honest answer to "Do we really want to fix this?" is "not enough to risk breaking it" — none of those work.
@@ -331,7 +327,6 @@ But if the honest answer to "Do we really want to fix this?" is "not enough to r
 When the answer is yes, the solution is boring.
 
 Not a rewrite. Not a cleanup sprint.
-
 Just making it slightly safer to touch.
 
 One test. One boundary. One responsibility pulled out. One name that finally makes sense.
@@ -344,15 +339,19 @@ That's how ponds clear.
 
 I stopped thinking dirty code was the real problem.
 Fear usually was.
+
 And the first fix, for me, wasn't technical.
 It was being honest about that.
 
+---
+
 Part 5 of 7.
+
 1. Why good developers make bad decisions under pressure
-2. Development practices that survive pressure — this one
+2. Development practices that survive pressure
 3. Replaceability: what good software actually needs
 4. SNP: small steps matter
-5. Dirty Pond: when fear owns your codebase
+5. Dirty Pond: when fear owns your codebase — this one
 6. IWD: when perfect code solves the wrong problem
 7. DGTF++: The Map
 
@@ -410,8 +409,8 @@ Now I ask one question before building anything:
 Example:
 
 "We need encryption."
-"Why?"
-"We don't want to get penalized."
+"What happens if there's no encryption?"
+"We will get penalized."
 "If there were another way to avoid penalties, would you still need encryption?"
 "...No."
 
@@ -484,12 +483,18 @@ I drew a map.
 
 Markers I can look back at when things get chaotic:
 
-• Am I solving the right problem? (IWD)
-• Am I rushing? (DGTF)
-• Am I trying to finish everything at once? (SNP)
+
+The path:
+- Is this the right problem? (IWD)
+- Is responsibility clear? (ROD)
+- Did I test first? (TFD)
+
+The pace:
+- Am I rushing? (DGTF)
+- Am I biting off too much? (SNP)
 
 That’s it.
-Three questions. Nothing fancy.
+Five markers. Nothing fancy.
 
 Reading this won’t fix anything.
 

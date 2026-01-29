@@ -179,7 +179,7 @@ The WHI questions we ask aren't just for getting answers. Through questioning, w
 |-------|---------|
 | **[Estimated]** | A hypothesis about the problem. Not yet verified. |
 | **[Verified]** | Fluent answer obtained through WHI. The problem is proven real. Safe to design. |
-| **[Corrected]** | WHI revealed it was fake. Updated to the real problem. |
+| **[Corrected]** | WHI revealed it was wrong or unnecessary. Discarded. (Real problem registered as new requirement) |
 
 Record the state of requirements with each question. Just having the team recognize "this feature is still [Estimated]" can prevent more than half the tragedies of departing for the wrong destination.
 
@@ -199,8 +199,8 @@ WHI excavates verbs from nouns. But some nouns seem like unbreakable rocks—**l
 
 **Series:**
 1. The Fear — Why direction matters
-2. Requirement Inversion — Verbs over nouns
-3. Who is "I"? — Finding the real owner
+2. Requirement Inversion
+3. Who is "I"?
 4. **WHI: The Dual Tool** ← You are here
 5. Even Laws Can Be Verbs 
 6. State Tracking 

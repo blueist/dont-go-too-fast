@@ -204,7 +204,7 @@ Just like `// TODO` in code, mark your requirements with state:
 
 - **[Estimated]**: "User seems to want to avoid re-login." (Still a hypothesis)
 - **[Verified]**: "WHI confirmed re-login causes work loss." (Validated)
-- **[Corrected]**: "Original assumption was wrong. Updated." (Fixed)
+- **[Corrected]**: "WHI revealed it was wrong or unnecessary." (Discarded)
 
 ---
 

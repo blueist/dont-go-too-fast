@@ -183,10 +183,10 @@ The depression you feel isn't your fault. You've just lost direction.
 This series will show you how to find it again:
 
 1. **The Fear** — Why direction matters  ← You are here
-2. Requirement Inversion — Verbs over nouns
-3. Who is "I"? — Finding the real owner
-4. WHI: The Dual Tool — Dismantling nouns
-5. Even Laws Can Be Verbs — Regulations hide verbs too
+2. Requirement Inversion 
+3. Who is "I"? 
+4. WHI: The Dual Tool 
+5. Even Laws Can Be Verbs 
 6. State Tracking 
 
 ---
